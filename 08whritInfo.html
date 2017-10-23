@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>填写用户信息</title>
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/08whritInfo.css">
+</head>
+<body style="background-color:white">
+    <div>
+        <ul>
+            <li><img src="./img/icons/weizhi.png" alt=""><span class="c"></span></li>
+            <li >套餐<input id="taocan" type="button" name="" value=""></li>
+            <li>预存金额<input id="money" type="button" name="" ></li>
+            <li >号码<input type="button" name="" id="phone" value=""></li>
+            <li>姓名<input type="text" name="" id="Name" placeholder="请填写身份证姓名"></li>
+            <li>身份证号<input type="text" name="" id="CardId" placeholder="请填入身份证号码"></li>
+            <li>收件人姓名<input type="text" id="consigneename" name=""  placeholder="请输入收件人姓名"></li>
+            <li>收件人电话<input type="text" name="" id="iphone" placeholder="请输入收件人电话"></li>
+            <li>收获地址:</li>
+            <li>地区
+                <select name="" id="select1">
+                            <option value="">请选择省份</option>
+                        </select>
+                <select name="" id="select2">
+                            <option value="">请选择市区</option>
+                        </select>
+                <select name="" id="select3">
+                            <option value="">请选择区域</option>
+                        </select>
+            </li>
+            <li>详细地址<input type="text" name="" id="address1" placeholder="XX路(街、村) XX号(幢、栋)"></li>
+            <li>
+                <h4>说明:</h4>
+                <p>1.目前仅派送市区用户</p>
+                <p>2.客户填写信息后,将通过派送员给客户派送红</p>
+                <div id="set">点击预约套餐</div>
+            </li>
+        </ul>
+    </div>
+    <!-- 模态框 -->
+    <div class="mask">
+        <div class="box">
+            提示！
+            <h1 class="prompt">请输入正确的用户名</h1>
+            <span></span>
+            <input type="button" value="确定" id="btn">
+        </div>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/MLRoute.js"></script>
+    <script src="./js/tools.js"></script>    
+    <script src="./js/08whritInfo.js"></script>
+</body>
+
+</html>

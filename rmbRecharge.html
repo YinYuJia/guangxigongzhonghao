@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>移动充值</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/rmbRecharge.css" />
+		<script src="js/rem-w-debug.min.js"></script>
+	</head>
+	<body>
+		<!--<div class="rmb_chongzhi">-->
+			<div  class="phone_num">
+				<label>当前号码</label>
+				<input onkeyup='this.value=this.value.replace(/\D/gi,"")' class="mobile" type="text" placeholder="请输入11位手机号码"/>
+			
+			</div>
+			
+		<!--</div>-->
+		
+		<div class="rmb_chongzhi">
+			<ul class="select_li">
+				<li class="china_mobile">中国移动</li>
+				<li class="china_union">中国联通</li>
+				<li class="china_telcom">中国电信</li>
+				<span class="line"></span>
+			</ul>
+			<div class="replace_div">
+			
+				<ul class="select_sum clearfix">
+					<li>
+						<p class="biao_price">20元</p>
+						<p class="real_price">售价<span class="span_price">20.0元</span></p>
+					</li>
+					<li>
+						<p class="biao_price">30元</p>
+						<p class="real_price">售价<span class="span_price">30.0元</span></p>
+					</li>
+					<li>
+						<p class="biao_price">50元</p>
+						<p class="real_price">售价<span class="span_price">50.0元</span></p>
+					</li>
+					<li>
+						<p class="biao_price">100元</p>
+						<p class="real_price">售价<span class="span_price">100.0元</span></p>
+					</li>
+					<li>
+						<p class="biao_price">200元</p>
+						<p class="real_price">售价<span class="span_price">200.0元</span></p>
+					</li>
+					<li>
+						<p class="biao_price">300元</p>
+						<p class="real_price">售价<span class="span_price">300.0</span>元</p>
+					</li>
+				</ul>
+				
+				<div class="custom_money">
+					<label>请输入金额：</label> <input onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" type="text" placeholder="请输入大于10的正整数"/>
+				</div>
+				<p class="bind_price">实际付款：<span class="price_Actual">00.0元</span></p>
+				
+				<p class="foot_wrap">
+					<span class="recharge_btn">立即充值</span>
+				</p>
+					
+			</div>
+		</div>
+		<div class="mask">
+			
+		</div>
+		<div class="modal_box">
+			<h1>提交</h1>
+			<p>您要充值号码： <span class="cz_mobile">xxxx</span></p>
+			<p>	     充值金额：<span class="cz_money">0.0元</span></p>
+			<p>   实际支付：<span class="sj_money">0.0元</span></p>
+			<p class="btn_wrap">
+				<span id="cencel_btn">取消</span><span id="sure_btn">确定</span>
+			</p>
+		</div>
+	
+	
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/MLRoute.js"></script>
+	<script src="js/rmbRecharge.js"></script>
+	</body>
+</html>

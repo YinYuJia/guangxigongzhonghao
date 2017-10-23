@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title>套餐详情</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			body{
+				color: #444444;
+			}
+			.item_one ,.item_second,.item_third,.footer{
+				background-color: #FFFFFF;
+				padding: 0 0.6875rem;
+				
+			}
+			.item_second,.item_third,.footer{
+				margin-top: 0.625rem;
+			}
+			.item_one .p1 ,.item_second .p1,.item_third .p1{
+				font-size: 0.8125rem;
+				color: #008daf;
+				padding: 0.9375rem 0;
+			}
+			.item_one .p2 ,.item_second .p2,.item_third .p2{
+				font-size: 0.6875rem;
+				padding-bottom: 1.125rem;
+				letter-spacing: 1px;
+				line-height:22px;
+			}
+			
+			.footer .div_a {
+				padding-top: 0.9375rem;
+				
+			}
+			.div_a label{
+				color: #008daf;
+				font-size: 0.75rem;
+			}
+			.div_a input{
+				width: 8.375rem;
+				border: 1px solid #d2d2d2;
+				border-radius: 5px;
+				padding: 6px 0px 6px 5px;
+				font-size: 0.7875rem;
+				vertical-align:middle
+			}
+			.div_a .identifying_code{
+				font-size: 0.6875rem;
+				color: #FFFFFF;
+				display: inline-block;
+				background-color: #24bfe0;
+				padding: 0.3475rem 0.375rem;
+				border-radius: 5px;
+			}
+			.btn_wrap {
+				text-align: center;
+				padding: 1.125rem 0 2.3125rem 0;
+			}
+			.btn_wrap span {
+				display: inline-block;
+				font-size: 0.75rem;
+				padding: 0.5625rem 2.1875rem;
+				color: #FFFFFF;
+				background-color: #24bfe0;
+				border-radius: 5px;
+			}
+			.mask {
+               position: fixed;
+               top: 0%;
+               left: 0%;
+               /*transform: translate(-50%);*/ 
+               height:100%;
+               width: 100%;
+               background-color: rgba(0, 0,0,.3);
+               display: none;
+           }
+           .mask .box {
+               width: 13.125rem;
+               background-color: white;
+               text-align: center;
+               position: relative;
+               top: 40%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               border-radius: .625rem;
+               overflow: hidden;
+               padding:0.6rem 0 0 0;
+           }
+           .mask .box p {
+           		padding: 1.5rem 0.5rem;
+              	color: black;
+              	word-wrap: break-word;
+           }
+           .mask .box input {
+               border-top: .0625rem solid #ccc;
+               height: 1.875rem;
+               width: 100%;
+               /*position: absolute;*/
+               /*bottom: 0;*/
+               /*left: 50%;*/
+               /*transform: translate(-50%);*/
+               background-color: white;
+           }
+		</style>
+		<script src="js/rem.js"></script>
+		
+	</head>
+	<body>
+		<div class="item_one">
+			<p class="p1">| 产品名称</p>
+			<p class="p2"></p>
+		</div>
+		<div class="item_second">
+			<p class="p1">| 产品说明</p>
+			<p class="p2"></p>
+		</div>
+		<div class="item_third">
+			<p class="p1">| 产品说明</p>
+			<p class="p2">输入手机号码并下发验证码，短信直接回复验证码后，点击“提交办理”即可办理业务。</p>
+		</div>
+		<div class="footer">
+			<div class="div_a">
+				<label>您的手机号</label>
+				<input id="phone_num" type="text" />
+				<span class="identifying_code" id="btn_code">下发验证码</span>
+			</div>
+			<p class="btn_wrap"><span>提交办理</span></p>
+		</div>
+		
+		<div class="mask">
+             <div class="box">
+               	<h1 style="font-size: 0.9rem;">提示！</h1>
+               	<p class="prompt">请输入正确的用户名</p>
+                <input type="button" value="确定" id="btn">
+           </div>
+        </div>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/tools.js"></script>
+		<script src="js/MLRoute.js"></script>
+		<script type="text/javascript">
+			
+			function  packge_Active() {
+				Route.getMallGetProduct(function(data) {
+					//根据上页面参数找到对象数据    localstorage
+					console.log(window.localStorage.getItem('cunsong_key'));
+					var getMall_data = data.content.套餐合约[window.localStorage.getItem('cunsong_key')];
+					$(".item_one>.p2").text(getMall_data.contractname);
+					$(".item_second>.p2").text(getMall_data.explain);
+					
+					var planId = getMall_data.planId;
+					var main_business_type = getMall_data.main_business_type;
+					var id = getMall_data.id;
+					console.log(id)
+					
+					code_callback(planId,main_business_type,id);//验证码回调
+				})
+			}
+			
+			
+			function  code_callback(planId,main_business_type,id) {
+				var bool_clik = true;
+				$("#btn_code").click(function() {
+					if (bool_clik) {
+						var phone_Num = $("#phone_num").val();
+						if (yyj.isPhone(phone_Num)) {
+							bool_clik = false;
+							$(".identifying_code").text("发送中...");
+							Route.getMallRecommendFXOrder(phone_Num,planId,main_business_type,id,'sendRandomSMS',function(data) {
+								console.log(data);
+								if (data.status) {
+									$(".identifying_code").css('background-color',"#ccc").text("已发送");
+									yyj.prompt('短信回复之后提交办理');
+									submit_callback(phone_Num,planId,main_business_type,id)
+								}else{
+									if (data.msg.indexOf('请勿重复提交')!= -1) {
+										yyj.prompt('短信回复之后提交办理');
+										$(".identifying_code").css('background-color',"#ccc").text("已发送");
+										submit_callback(phone_Num,planId,main_business_type,id)
+									}else{
+										$(".identifying_code").text("下发验证码");
+										yyj.prompt(data.msg);
+										bool_clik = true;
+									}
+								}
+							})
+						}else {
+							yyj.prompt('请输入正确手机号');
+							console.log('不是手机号')
+						}
+					}
+					
+					
+				})
+			}
+			
+				
+			function  submit_callback(phone_Num,planId,main_business_type,id) {
+				var bool_clik = true;
+				$(".btn_wrap>span").click(function(event) {
+					if (bool_clik) {
+						bool_clik = false;
+						Route.getMallRecommendFXOrder(phone_Num,planId,main_business_type,id,'doBiz',function(data) {
+							bool_clik = true;
+							console.log(data);
+							yyj.prompt(data.msg);
+						})
+					}
+					
+				})
+			}
+			
+			
+			
+			packge_Active();
+			
+			
+			
+
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

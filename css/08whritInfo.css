@@ -1,0 +1,81 @@
+div ul li {
+    height: 2.0625rem;
+    border-bottom: .0625rem solid #eee;
+    line-height: 2.0625rem;
+    text-indent: .9375rem;
+    position: relative;
+}
+div ul li:nth-child(1) {
+    text-indent: 0;
+}
+div ul li:nth-child(1) img {
+    height: .875rem;
+    width: .75rem;
+    float: left;
+    margin-left: .9375rem;
+    margin-top: .625rem;
+    margin-right: .625rem;
+}
+#taocan,#money,#phone {
+    background-color: white;
+    text-align: left;
+}
+div ul li input  {
+    position: absolute;
+    right: 0;
+    width: 13.125rem;
+    height: 100%;
+}
+
+.mask {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    /* transform: translate(-50%); */
+    height:100%;
+    width: 100%;
+    background-color: rgba(0, 0,0,.3);
+    display: none;
+}
+.mask .box {
+    height: 7.6875rem;
+    width: 13.125rem;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: .625rem;
+    overflow: hidden;
+}
+.mask .box h1 {
+    color: black;
+    line-height: 5.68rem;
+}
+.mask .box input {
+    border-top: .0625rem solid #ccc;
+    height: 1.875rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+}
+div ul li p {
+    text-indent: 2rem;
+}
+#set {
+    width: 7.475rem;
+    height: 1.625rem;
+    background-image: linear-gradient(to right,#0277bb,#06b0ec);
+    /* text-align: center; */
+    text-align: left;
+    line-height: 1.625rem;
+    font-size: .9375rem;
+    color: white;
+    margin: 1.85rem auto;
+    border-radius: .625rem;
+    font-weight: 700;
+}

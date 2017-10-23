@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />	
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>飞享套餐列表</title>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/10.2goodSetMeal.css">
+	<link rel="stylesheet" href="./css/yyjNav.css">
+	<script src="./js/rem.js"></script>
+</head>
+
+<body>
+	<script src="./js/nav.js"></script>
+	<div id="section">
+		<div class="list_wrap">
+			<script type="text/html" id="tpl">
+				<div class="banner"></div>
+				{{each content["移动"] as val i}}
+				<a href="10.3setMaelxiangqing.html?name={{val.contractname}}&&info={{val.explain}}&&planid={{val.planId}}&&main={{val.main_business_type}}&&id={{val.id}}">
+					<div class="item">
+						<div class="left_div">
+							<!-- <p class="tixing">{{val.contractname.split("-")[0].substring(4)}}</p> -->
+							<span class="cun_rmb col">{{val.contractname.split("-")[0].substring(0,2)}}{{val.contractname.split("-")[0].substring(4,6)}}</span>
+						</div>
+						<div class="right_div">
+							<h1>{{val.contractname}}</h1>
+							<p class="p1">
+								<img class="icon_lei" src="img/icons/2.png" />
+								<span id="">{{val.explain.split('，')[2].substring(2)}}</span>
+							</p>
+							<p class="p2">
+								<img class="icon_fan" src="img/icons/1.png" />
+								<span id="">{{val.explain.split('，')[1]}}</span>
+							</p>
+						</div>
+						<div class="clear">
+                              
+						</div>
+					</div>
+				</a>
+				{{/each}}
+			</script>
+
+		</div>
+	</div>
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/yyjNav.js"></script>
+	<script src="./js/template.js"></script>
+	<script src="./js/MLRoute.js"></script>
+	<script src="./js/tools.js"></script>
+	<script src="./js/10.2goodSetMeal.js"></script>
+</body>
+
+</html>

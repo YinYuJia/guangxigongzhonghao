@@ -1,0 +1,129 @@
+body {
+    color: #444444;
+}
+
+.item_one,
+.item_second,
+.item_third,
+.footer {
+    background-color: #FFFFFF;
+    padding: 0 0.6875rem;
+}
+
+.item_second,
+.item_third,
+.footer {
+    margin-top: 0.625rem;
+}
+
+.item_one .p1,
+.item_second .p1,
+.item_third .p1 {
+    font-size: 0.8125rem;
+    color: #008daf;
+    padding: 0.9375rem 0;
+}
+
+.item_one .p2,
+.item_second .p2,
+.item_third .p2 {
+    font-size: 0.6875rem;
+    padding-bottom: 1.125rem;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+#phone_num {
+    box-sizing: border-box;
+    padding: .1875rem .3125rem;
+    margin-left: 1.25rem;
+    width: 10.6875rem;
+    border-radius: 5px;
+}
+.footer .div_a {
+    padding-top: 0.9375rem;
+}
+
+.div_a label {
+    color: #008daf;
+    font-size: 0.75rem;
+}
+
+.div_a input {
+    width: 8.375rem;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    padding: 0 0px 0 5px;
+    font-size: 0.6875rem;
+}
+
+.div_a .identifying_code {
+    text-align: center;
+    width: 4.0375rem;
+    font-size: 0.6875rem;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color: #24bfe0;
+    padding: 0.3475rem 0.111rem;
+    border-radius: 2px;
+}
+
+.footer {
+    position: relative;
+}
+.btn_wrap {
+    height: 2rem;
+    width:8.25rem;
+    text-align: center;
+    /* padding: 1.125rem 0 2.3125rem 0; */
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: inline-block; */
+    font-size: 0.75rem;
+    padding: 0.5625rem 2.1875rem;
+    color: #FFFFFF;
+    background-color: #24bfe0;
+    border-radius: 2px;
+   
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    /* background-color: red; */
+    background-color: rgba(0, 5, 0, .3);
+}
+.mask .content {
+    width: 13.125rem;
+    height: 7.5rem;
+    background-color: white;
+    border-radius: .625rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+.mask .content h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+    margin: 0.4rem 0;
+}
+.i {
+    font-size: .75rem;
+    line-height: 1.25rem;
+    padding: .625rem;
+}
+.rig {
+    height: 2.2625rem;
+    border-top: .0625rem solid #ccc;
+    font-size: .9375rem;
+    line-height:2.2625rem;
+    width: 100%;
+}

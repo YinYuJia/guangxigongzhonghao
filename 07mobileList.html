@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>靓号列表</title>
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/yyjNav.css">    
+    <link rel="stylesheet" href="./css/07mobileList.css">
+    
+</head>
+<body>
+        <script src="./js/nav.js"></script>
+     <div class="div">
+           <ul class="u">
+               <li  class="n1">号码</li>
+               <li  class="n2">套餐</li>
+               <li  class="n3">预存</li>
+               <li  class="n4">售价</li>
+           </ul>
+     </div>
+
+     <div class="content">
+        <div class="list lists" id="LIST">
+            <script type="text/html" id="tpl">
+                {{each content as val i}}
+                    <ul class="u2">
+                        <li class="n11 li">{{val.cardnumber}}</li>
+                        <li class="n22 li info" data-ID={{val.id}}>{{val.kkk}}</li>
+                        <li class="n33 li">{{val.res_code.substring(0,2)}}</li>
+                        <li class="n44 li">{{val.res_code.substring(0,2)}} <span class="input yuyue" >预约</span></li>
+                    </ul>
+                {{/each}}
+            </script>
+     </div>
+     </div>
+
+       <script type="text/html" id="TPL">
+        <!-- {{each content as val1 i}}      
+          <li class="n44 li">{{val1.price}} <span class="input yuyue" >预约</span></li>
+        {{/each}}   -->
+    </script>
+     <div id="mask">
+         <h2>全能卡20元套餐</h2>
+         <br>
+         <br>
+         <h3>套餐内容:</h3>
+         <p>基本月份:20元;内含广西省内流量1GB;国内语音、短信可使用套餐内流量转换</p>
+         <h3>资费说明:</h3>
+         <p>1.赠送来电显示和189邮箱,全国免费接听。</p>
+         <p>2.套餐超出收费标准:
+             <br>
+             <br>
+             <span>(1)国内流量:按0.0001元/KB收费</span>
+             <br>
+             <span>(2)国内短信:0.1元/条</span>
+         </p>
+         <h4 id="rightGo">确定</h4>
+     </div>
+     <div id="alt">
+         <h1>对不起,暂无预选号码</h1>
+         <h3 class="lll">确定</h3>
+     </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/MLRoute.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/yyjNav.js"></script>
+    <script src="./js/07mobileList.js"></script>
+</body>
+</html>

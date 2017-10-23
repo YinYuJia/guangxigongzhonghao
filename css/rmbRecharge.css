@@ -1,0 +1,195 @@
+body html{
+	width: 100%;
+	height: 100%;
+}
+.phone_num {
+	text-align: center;
+	margin-top: 0.4rem;
+}
+
+.phone_num label {
+	font-size: 0.28rem;
+	color: #008daf;
+}
+.phone_num input {
+	width: 3.8rem;
+	border: 1px solid #E3E2E2;
+	border-radius: 3px;
+	font-size: 0.28rem;
+	padding: 8px 8px;
+	margin-left:8px;
+	color: #333;
+}
+.rmb_chongzhi {
+	width: 83%;
+	margin: auto;
+}
+.rmb_chongzhi .select_li{
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox;/*兼容低版本*/ 
+	
+	display: -moz-flex; 
+	display: -webkit-flex; 
+	display: flex; 
+	 justify-content:center;
+	
+	border: 1px solid #eeeeee;
+	margin: 0.4rem 0;
+	position: relative;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(200,200,200,0);
+	
+}
+.select_li li {
+	display: inline-block;
+	font-size: 0.28rem;
+	flex-grow:1;
+	text-align: center;
+	margin: 5px 0;
+	padding: 0.10rem 0 ;
+	border-left: 1px solid #EEE;
+	color: #999999;
+}
+.select_li li:nth-child(1) {
+	border: 0;
+	color: #008DAF;
+}
+.rmb_chongzhi .select_sum {
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(200,200,200,0);
+	 /*justify-content:center;*/
+	
+	/*border: 1px solid #eeeeee;*/
+}
+.select_sum li {
+	/*display: inline-block;*/
+	float: left;
+	width: 1.55rem;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	padding: 0.136rem 0;
+	margin-top: 0.18rem;
+s
+}
+.select_sum li .biao_price {
+	font-size:0.27rem ;
+	text-align: center;
+	font-weight: 600;
+}
+.select_sum li .real_price {
+	font-size: 0.2rem;
+	text-align: center;
+}
+.select_sum li:nth-child(2),.select_sum li:nth-child(5){
+	margin: 0.18rem 5% auto 5%;
+}
+.custom_money {
+	margin: 0.17rem 0;
+	font-size: 0.24rem;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	padding: 0.18rem 0 0.18rem 0.136rem;
+}
+.custom_money label {
+	font-weight: 600;
+}
+.bind_price {
+	font-size: 0.24rem;
+}
+.bind_price span {
+	font-size: 0.27rem;
+	color: #fb5614;
+	font-weight: 500;
+}
+.foot_wrap {
+	text-align: center;
+	padding-top: 0.546rem;
+}
+.foot_wrap .recharge_btn {
+	display: inline-block;
+	color: #FFFFFF;
+	font-size: 0.25rem;
+	background-color: #18aed3;
+	border-radius: 3px;
+	padding: 0.17rem 0.7rem;
+}
+.line {
+	display: inline-block;
+	/*border-bottom: 3px solid #008DAF;*/
+	height:3px;
+	width: 1.2rem;
+	position: absolute;
+	border-radius: 500px;
+	bottom: 0;
+	left: 17%;
+	background-color: #008daf;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+/*模态框*/
+
+.mask {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	top: 0;
+	display: none;
+}
+.modal_box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	background-color: #fff;
+	text-align: center;
+	/*padding: 0 0.3rem;*/
+	border-radius: 5px;
+	display: none;
+}
+.modal_box h1 {
+	padding: 0.27rem 0 0.12rem 0;
+	color: #000;
+	font-size: 0.27rem;
+	font-weight: 500;
+}
+.modal_box p {
+	font-size: 0.24rem;
+	padding-top: 0.15rem;
+}
+ .modal_box .btn_wrap {
+	padding-top: 0rem;
+	border-top: 1px solid #c8c8cc;
+	width: 4.2rem;
+	margin-top: 0.35rem;
+}
+.btn_wrap span{
+	display: inline-block;
+	width: 49%;
+	padding: 0.3rem 0;
+	font-size: 0.27rem;
+	font-weight: 500;
+}
+#sure_btn {
+	border-left: 1px solid #C8C8CC;
+}
+
+.signPop {
+	font-size: 0.27rem;
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: rgba(0,0,0,0.8);
+	border-radius: 3px;
+	color: #FFFFFF;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+/*新增样式*/
+.select_li .china_union,.select_li .china_telcom {
+	color: #eee;
+}

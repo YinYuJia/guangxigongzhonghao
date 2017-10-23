@@ -1,0 +1,84 @@
+html,body{
+	width: 100%;
+}
+.nav {
+	position: relative;
+	border-bottom: 1px solid #eee;
+	width: 100%;
+}
+.select_business {
+	width: 60%;
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox;/*兼容低版本*/ 
+	
+	display: -moz-flex; 
+	display: -webkit-flex; 
+	display: flex; 
+	justify-content:center;
+	
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(200,200,200,0);
+}
+.select_business li{
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 0.7rem;
+	flex-grow:1;
+	text-align: center;
+	margin: 5px 0;
+	padding: 0.625rem 0 ;
+	border-left: 1px solid #EEE;
+	color: #999999;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(200,200,200,0);
+	transition: all .3s;
+}
+
+.selectStyle {
+	font-size: 0.6rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	right: 0.9375rem;
+	border:1px solid #EEEEEE;
+}
+.select_city {
+	font-size: 0.6rem;
+	padding: 0.2rem 0.5rem;
+	display: none;
+}
+
+#alt {
+    height: 21.375rem;
+    width: 17rem;
+    background-color: white;
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url('../img/33.png');
+    background-size: 100% 100%;
+}
+#alt h1 {
+    font-size: .875rem;
+    color: black;
+    text-align: center;
+    line-height: 23rem;
+}
+
+.line {
+	display: inline-block;
+    /* border-bottom: 3px solid #008DAF; */
+    height: 3px;
+    width: 2.8rem;
+    position: absolute;
+    border-radius: 500px;
+    bottom: 0;
+    left: 11%;
+    background-color: #008daf;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

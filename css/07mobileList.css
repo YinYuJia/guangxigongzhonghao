@@ -1,0 +1,165 @@
+
+  .div .u {
+      height: 1.875rem;
+      border-top: .0625rem solid #ccc;
+      padding-top: .0625rem;
+  }
+  .div .u li {
+       height: 1.875rem;
+       background-image: linear-gradient(to bottom,#549eb5 0%,#549eb5 50%,#318aa4 50%,#318aa4 100%);
+       
+       /* background-color: #318AA4; */
+       float: left;
+       color: white;
+       text-align: center;
+       line-height: 1.875rem;
+       box-sizing: border-box;
+   }
+   .div .u li:nth-child(1) {
+       width: 5.5625rem;
+       border-right: 1px solid white;
+   }
+   .div .u li:nth-child(2) {
+    width: 4.5rem;
+    border-right: 1px solid white;
+}
+.div .u li:nth-child(3) {
+    width: 2.6875rem;
+    border-right: 1px solid white;
+}
+.div .u li:nth-child(4) {
+    width: 5.985rem;
+    /* border-right: 1px solid white; */
+}
+
+.list .u2 .li {
+    float: left;
+    height: 1.875rem;
+    /* background-color: #318AA4; */
+    /* float: left; */
+    /* color: white; */
+    text-align: center;
+    line-height: 1.875rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.list .u2 .n11 {
+    width: 5.5625rem;
+    border-right: 1px solid white;
+}
+.list .u2 .n22 {
+    width: 4.5rem;
+    border-right: 1px solid white;
+}
+.list .u2 .n33 {
+    width: 2.6875rem;
+    border-right: 1px solid white;
+}
+.list .u2 .n44 {
+    width: 5.985rem;
+    text-align: left;
+    text-indent: .3125rem;
+}
+
+.n44 .input {
+    width: 2.8125rem;
+    height: 1.3rem;
+    background-color: #12a6cc;
+    color: white;
+    border: #3091ac solid .0625rem;
+    border-radius: .1875rem;
+    position: absolute;
+    top: .3125rem;
+    top: 100/40rem;
+    right: .1875rem;
+    text-align: center;
+    line-height: 1.3rem;
+}
+.list ul:nth-child(2n-1) li {
+    background-color: #e5f1f4;
+}
+.list ul:nth-child(2n) li {
+    background-color: #f7fbfc;
+}
+
+#mask {
+    height: 21.375rem;
+    width: 17rem;
+    background-color: white;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+#mask h2 {
+    height: 2.625rem;
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    line-height: 2.625rem;
+    border-bottom: .0625rem solid #ccc;
+}
+#mask h3 {
+    text-indent: .325rem;
+}
+#mask>p {
+    padding: .325rem .325rem;
+}
+#mask>p span {
+    display: block;
+    text-indent: .325rem;
+}
+#rightGo {
+    height: 1.875rem;
+    width: 6.875rem;
+    background-color: #028fb9;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.875rem;
+    border-radius: 1.25rem;
+}
+
+#alt {
+    height: 21.375rem;
+    width: 17rem;
+    background-color: white;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url('../img/33.png');
+    background-size: 100% 100%;
+}
+#alt h1 {
+    font-size: 1.5625rem;
+    color: black;
+    text-align: center;
+    line-height: 23rem;
+}
+#alt .lll {
+    height: 1.875rem;
+    width: 6.875rem;
+    background-color: #028fb9;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.875rem;
+    border-radius: 1.25rem;
+}
+
+ 
